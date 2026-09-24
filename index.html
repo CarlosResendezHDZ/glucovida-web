@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>GlucoVida</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+<!-- ASISTENTE GLUCOVIDA -->
+
+<button class="ia-boton" id="iaBoton">
+    ✦
+</button>
+
+<div class="ia-chat" id="iaChat">
+
+    <div class="ia-header">
+        <div>
+            <strong>✦ GlucoVida IA</strong>
+            <span>Asistente educativo</span>
+        </div>
+
+        <button id="cerrarIA">×</button>
+    </div>
+
+    <div class="ia-mensajes" id="iaMensajes">
+
+        <div class="mensaje ia">
+            Hola 👋 Soy el asistente de GlucoVida.
+            Puedes preguntarme sobre glucosa, alimentación,
+            ejercicio o diabetes.
+        </div>
+
+    </div>
+
+    <div class="ia-input">
+
+        <input
+            type="text"
+            id="preguntaIA"
+            placeholder="Escribe tu pregunta..."
+            autocomplete="off"
+        >
+
+        <button id="enviarIA">
+            ➜
+        </button>
+
+    </div>
+
+</div>
+<body>
+
+    <header class="header" id="header">
+
+        <a href="#" class="logo">
+            Gluco<span>Vida</span>
+        </a>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#control">Control</a>
+            <a href="#bienestar">Bienestar</a>
+            <a href="#educacion">Educación</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-fondo"></div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-contenido">
+
+                <div class="hero-texto">
+
+                    <span class="hero-subtitulo">
+                        GLUCOVIDA
+                    </span>
+
+                    <h1>
+                        Tu salud,<br>
+                        más clara.
+                    </h1>
+
+                    <p>
+                        Comprende tu glucosa y lleva un mejor
+                        seguimiento de tus hábitos diarios.
+                    </p>
+
+                    <div class="hero-botones">
+
+                        <a href="#control" class="btn btn-principal">
+                            Explorar
+                        </a>
+
+                        <a href="#bienestar" class="btn btn-secundario">
+                            Conocer más
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scroll-indicador">
+                <span>Descubre</span>
+
+                <div class="flecha">
+                    ↓
+                </div>
+            </div>
+
+        </section>
+
+
+       <section class="control" id="control">
+
+    <div class="control-fondo"></div>
+    <div class="control-overlay"></div>
+
+    <div class="control-contenido">
+
+        <div class="control-texto">
+
+            <span class="control-etiqueta">
+                CONTROL INTELIGENTE
+            </span>
+
+            <h2>
+                Tus datos cuentan
+                una historia.
+            </h2>
+
+            <p>
+                Visualiza tus registros, identifica cambios
+                y utiliza GlucoVida IA para obtener una explicación
+                sencilla de tus datos.
+            </p>
+
+            <div class="control-mini">
+
+                <div>
+                    <strong>7</strong>
+                    <span>registros</span>
+                </div>
+
+                <div>
+                    <strong>116</strong>
+                    <span>promedio demo</span>
+                </div>
+
+                <div>
+                    <strong>136</strong>
+                    <span>valor más alto</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel-control">
+
+            <div class="panel-superior">
+
+                <div>
+                    <span>Resumen semanal</span>
+
+                    <h3>
+                        Glucosa
+                    </h3>
+                </div>
+
+                <div class="panel-estado">
+                    DEMO
+                </div>
+
+            </div>
+
+
+            <div class="grafica-contenedor">
+
+                <canvas id="graficaGlucosa"></canvas>
+
+            </div>
+
+
+            <div class="estadisticas">
+
+                <div>
+                    <span>Promedio</span>
+                    <strong id="promedioGlucosa">
+                        116
+                    </strong>
+                    <small>mg/dL</small>
+                </div>
+
+                <div>
+                    <span>Mínimo</span>
+                    <strong id="minimoGlucosa">
+                        102
+                    </strong>
+                    <small>mg/dL</small>
+                </div>
+
+                <div>
+                    <span>Máximo</span>
+                    <strong id="maximoGlucosa">
+                        136
+                    </strong>
+                    <small>mg/dL</small>
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn-analizar"
+                id="analizarIA"
+            >
+                ✦ Analizar con GlucoVida IA
+            </button>
+
+
+            <div
+                class="resultado-ia"
+                id="resultadoIA"
+            >
+
+                <div class="resultado-ia-titulo">
+                    <span>✦</span>
+
+                    <strong>
+                        Análisis inteligente
+                    </strong>
+                </div>
+
+                <p id="textoAnalisis">
+                    Pulsa el botón para que GlucoVida IA
+                    interprete estos registros.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/app.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
