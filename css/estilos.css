@@ -20,9 +20,7 @@ a {
 }
 
 
-/* ======================
-   HEADER
-====================== */
+/*HEADER*/
 
 .header {
     position: fixed;
@@ -125,9 +123,7 @@ a {
 }
 
 
-/* ======================
-   HERO
-====================== */
+/*HERO*/
 
 .hero {
     position: relative;
@@ -331,9 +327,7 @@ a {
 }
 
 
-/* =========================
-   CONTROL
-========================= */
+/*CONTROL*/
 
 .control {
     position: relative;
@@ -1071,3 +1065,5 @@ a {
         bottom: 18px;
     }
 }
+
+/* actualización GitHub Pages */
